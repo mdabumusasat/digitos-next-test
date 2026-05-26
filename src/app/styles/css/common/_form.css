@@ -1,0 +1,43 @@
+/*=== Default Form ===*/
+.form-control, .input-text {
+  height: calc(2.25rem + 27px);
+  padding: 14px 30px;
+  outline: 0;
+  background-color: #f4f5f8;
+  border: 1px solid #f4f5f8;
+  color: #111;
+  font-size: 0.9rem;
+  width: 100%;
+}
+.form-control::-webkit-input-placeholder, .input-text::-webkit-input-placeholder {
+  color: #111;
+  opacity: 1;
+}
+.form-control::-moz-placeholder, .input-text::-moz-placeholder {
+  color: #111;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder, .input-text:-ms-input-placeholder {
+  color: #111;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder, .input-text::-ms-input-placeholder {
+  color: #111;
+  opacity: 1;
+}
+.form-control::placeholder, .input-text::placeholder {
+  color: #111;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder, .input-text:-ms-input-placeholder {
+  color: #111;
+}
+.form-control::-ms-input-placeholder, .input-text::-ms-input-placeholder {
+  color: #111;
+}
+
+textarea.form-control {
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

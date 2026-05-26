@@ -1,0 +1,1 @@
+export const SITE_NAME = "Digitos | Digital Agency React Next JS Template";

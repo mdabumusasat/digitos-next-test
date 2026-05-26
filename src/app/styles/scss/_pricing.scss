@@ -1,0 +1,200 @@
+
+/***
+
+==================================================================
+    pricing-section
+==================================================================
+
+***/
+
+.pricing-section {
+  position: relative;
+  padding: 120px 0 90px;
+  @include media-breakpoint-down(lg){
+    padding: 80px 0 50px;
+  }
+  .shape-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include media-breakpoint-down(xxl){
+      display: none;
+    }
+  }
+  .shape-2 {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    @include media-breakpoint-down(xxl){
+      display: none;
+    }
+  }
+  .sec-title {
+    margin-bottom: 26px;
+    .title {
+    	max-width: 498px;
+    	margin: 0 auto;
+    }
+  }
+  .tabs-box {
+    position: relative;
+    .tab-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 60px;
+      @include media-breakpoint-down(lg){
+        margin-bottom: 30px;
+      }
+      .tab-btn {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        font-family: var(--heading-font-family);
+        color: var(--headings-color);
+        background-color: transparent;
+        letter-spacing: -3%;
+        &.one {
+          position: relative;
+          &.active-btn {
+            &:before {
+              right: -58px;
+            }
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            background-color: var(--theme-color1);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            right: -89px;
+            top: 0;
+            @include transition(all 300ms ease);
+            z-index: 1;
+          }
+        }
+      }
+      span {
+        position: relative;
+        display: inline-block;
+        width: 76px;
+        height: 46px;
+        border-radius: 100px;
+        background-color: var(--theme-color-lighter);
+        z-index: 0;
+      }
+    }
+  }
+}
+
+.pricing-block {
+  position: relative;
+  .inner-block {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 4px 60px 0px #0000000F;
+    background-color: var(--theme-color-white);
+    @include transition(all 300ms ease);
+    @include media-breakpoint-down(xxl){
+      padding: 40px 30px;
+    }
+    @include media-breakpoint-down(lg){
+      padding: 30px 20px;
+    }
+    &.active ,
+    &:hover {
+      border-color: var(--theme-color1);
+      .icon-one {
+        transform: rotateY(-180deg);
+      }
+      .theme-btn {
+        color: var(--theme-color1-text-color);
+        &:before{
+          transform: scale(1, 1);
+          transform-origin: bottom left;
+        }
+        span {
+          background-color: var(--theme-color-dark);
+          img {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    .cat {
+      position: absolute;
+      top: 50px;
+      right: 40px;
+      border-radius: 45px;
+      background-color: var(--theme-color-lighter);
+      padding: 6.4px 19px;
+      color: var(--theme-color1);
+    }
+    .icon-one {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 23px;
+      @include transition(all 300ms ease);
+    }
+    .title {
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .text {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .price-box {
+      padding-bottom: 20px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #DDDDDD;
+      .price {
+        font-size: 65px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0;
+        font-family: var(--heading-font-family);
+        color: var(--headings-color);
+        @include media-breakpoint-down(md){
+          font-size: 45px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: -2%;
+        }
+      }
+    }
+    .list-style-one {
+      position: relative;
+      margin-bottom: 40px;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        .icon {
+          position: relative;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          text-align: center;
+          line-height: 16px;
+          border-radius: 50%;
+          background-color: var(--theme-color1);
+          font-size: 10px;
+          color: var(--theme-color1-text-color);
+        }
+        span {
+          color: var(--headings-color);
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

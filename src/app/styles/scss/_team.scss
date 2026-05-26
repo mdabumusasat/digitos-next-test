@@ -1,0 +1,218 @@
+/***
+
+====================================================================
+    Team Section
+====================================================================
+
+***/
+
+.team-section {
+  position: relative;
+  padding: 0 15px;
+  .outer-box {
+    position: relative;
+    max-width: 1840px;
+    margin: 0 auto;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 120px 0 90px;
+    background-color: #151515;
+    @include media-breakpoint-down(lg){
+      padding: 80px 0 50px;
+    }
+    .shape-1 {
+      position: absolute;
+      bottom: 22px;
+      left: 33px;
+      pointer-events: none;
+    }
+    .shape-2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+    }
+    .shape-3 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+    }
+    .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; 
+      object-fit: cover;
+      pointer-events: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .sec-title {
+      .title {
+        max-width: 498px;
+        margin: 0 auto 48px;
+        @include media-breakpoint-down(lg){
+          margin: 0 auto 35px;
+        }
+      }
+    }
+  }
+}
+
+.team-block {
+  .inner-block {
+    position: relative;
+    margin: 0 0 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    &:hover {
+      &:before {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+      .author-info {
+        bottom: 40px;
+        .designation {
+          color: var(--theme-color-white);
+        }
+        .social-icon {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+
+      }
+      .images-box {
+        .image {
+          img {
+            &:first-child{
+              transform: translateX(0) scaleX(1);
+              opacity: 1;
+              filter: blur(0);
+            }
+            &:nth-child(2){
+              transform: translateX(-50%) scaleX(2);
+              opacity: 0;
+              filter: blur(10px);
+            }
+          }
+        }
+      }
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      background: linear-gradient(360deg, #131313 11.41%, rgba(19, 19, 19, 0) 100%);
+      width: 100%;
+      height: calc(60% - 3px);
+      bottom: 0;
+      left: 0;
+      border-radius: 30px;
+      z-index: 1;
+      opacity: 1;
+      visibility: visible;
+      @include transition(all 300ms ease);
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      background: linear-gradient(360deg, #F2520D 6.03%, rgba(19, 19, 19, 0) 63.26%);
+      width: 100%;
+      height: calc(60% - 3px);
+      bottom: 0;
+      left: 0;
+      border-radius: 30px;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(all 300ms ease);
+    }
+    .images-box {
+      position: relative;
+      .image {
+        position: relative;
+        border-radius: 30px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        img {
+          position:relative;
+          width:100%;
+          border-radius: 30px;
+          display:block;
+          @include transition(all 500ms ease);
+          &:first-child{
+            position:absolute;
+            left:0px;
+            top:0px;
+            right:0px;
+            bottom:0px;
+            z-index:1;
+            transform: translateX(50%) scaleX(2);
+            opacity: 0;
+            filter: blur(10px);
+          }
+        }
+      }
+    }
+    .author-info {
+      position: absolute;
+      left: 40px;
+      bottom: -9px;
+      z-index: 2;
+      @include transition(all 300ms ease);
+      .name {
+        position: relative;
+        margin-bottom: 0;
+        a {
+          color: var(--theme-color-white);
+        }
+      }
+      .designation {
+        position: relative;
+        color: rgba(var(--theme-color-white), .8);
+        margin-bottom: 12px;
+        @include transition(all 300ms ease);
+      }
+      .social-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        transform: translateY(-10px);
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all 300ms ease);
+        li {
+          a {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            backdrop-filter: blur(67.80000305175781px);
+            background-color: var(--theme-color-dark);
+            color: var(--theme-color-white);
+            font-size: 14px;
+            &:hover {
+              background-color: var(--theme-color1);
+              color: var(--theme-color1-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

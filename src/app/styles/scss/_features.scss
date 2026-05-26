@@ -1,0 +1,114 @@
+/*** 
+
+====================================================================
+    Feature section
+====================================================================
+
+***/
+
+.feature-section {
+  background-color: var(--theme-color-dark);
+  padding: 80px 0;
+  position: relative;
+  .shape-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .shape-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include media-breakpoint-down(xxl){
+      display: none;
+    }
+  }
+  .feature-outer {
+    align-items: center;
+    display: grid;
+    flex-wrap: wrap;
+    gap: 20px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    position: relative;
+    @include media-breakpoint-down(lg){
+      grid-template-columns: auto auto;
+      gap:30px;
+      justify-content: center;
+    }
+    @include media-breakpoint-down(sm){
+      grid-template-columns: auto;
+    }
+  }
+  .border-one {
+    background-color: rgba(246, 246, 246, 0.2);
+    height: 138px;
+    position: relative;
+    width: 1px;
+    @include media-breakpoint-down(xl){
+      display: none;
+    }
+  }
+  .feature-block {
+    .inner-block {
+      max-width: 326px;
+      position: relative;
+      @include media-breakpoint-down(md){
+        max-width: 500px;
+        text-align: center;
+      }
+      &:hover {
+        .content-box {
+          .icon {
+            transform: rotateY(-180deg);
+          }
+        }
+      }
+      .content-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 23px;
+        @include media-breakpoint-down(md){
+          flex-direction: column;
+          gap: 20px;
+        }
+        .icon {
+          position: relative;
+          margin-right: 22.5px;
+          @include transition(all 300ms ease);
+        }
+        .title {
+          max-width: 222px;
+          line-height: 1;
+          color: var(--theme-color-white);
+          margin-bottom: 0;
+          @include media-breakpoint-down(xl){
+            br {
+              display: none;
+            }
+          }
+          @include media-breakpoint-down(md){
+            max-width: 100%;
+          }
+          @include media-breakpoint-down(sm){
+            font-size: 24px;
+            line-height: 30px;
+          }
+        }
+      }
+      &:before{
+        background-color: rgba(246, 246, 246, 0.2);
+        content: "";
+        height: 138px;
+        position: absolute;
+        right: -45px;
+        top: 0;
+        width: 1px;
+        @include media-breakpoint-down(xl){
+          display: none;
+        }
+      }
+    }
+  }
+}
