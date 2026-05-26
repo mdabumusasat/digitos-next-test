@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import type { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import { useState } from "react";
@@ -38,7 +39,7 @@ const testimonials = [
 ];
 
 export default function TestimonialSection() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+ const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
     <section className="testimonial-section">
@@ -116,7 +117,7 @@ export default function TestimonialSection() {
                   <div className="col-xl-5 col-lg-6 col-md-6 col-sm-6">
                     <Swiper
                       modules={[Thumbs]}
-                      onSwiper={setThumbsSwiper}
+                      onSwiper={(swiper: SwiperType) => setThumbsSwiper(swiper)}
                       slidesPerView={1}
                       watchSlidesProgress
                       className="ks-testi-author-active pb-0">
