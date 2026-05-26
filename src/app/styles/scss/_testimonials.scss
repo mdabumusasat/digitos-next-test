@@ -267,7 +267,7 @@ Testimonial Section
   &-navigation {
     display: flex;
     gap: 12px;
-    justify-content: end;
+     justify-content: flex-end;
     padding-right: 31px;
     @include media-breakpoint-down(sm){
       justify-content: start;
